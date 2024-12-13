@@ -3,7 +3,7 @@ import strings as s
 import random
 
 class Mamma(Role):
-    """La mamma sente le voci in giro per la città e scopre un nuovo ruolo ogni tanto..."""
+    """Mom hears rumors around town and discovers a new role every now and then..."""
     icon = s.mom_icon
     team = 'Good'
     name = s.mom_name
