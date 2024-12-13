@@ -2,7 +2,7 @@ from .Role import Role
 import strings as s
 
 class Corrotto(Role):
-    """Il corrotto è un investigatore che lavora per la Mifia."""
+    """The Corrupt One is an investigator who works for the Mifia."""
     icon = s.corrupt_icon
     team = 'Evil'
     name = s.corrupt_name
@@ -14,7 +14,7 @@ class Corrotto(Role):
         self.poweruses = self.refillpoweruses
 
     def __repr__(self) -> str:
-        return "<Role: Corrotto, {uses} uses left>".format(uses=self.poweruses)
+        return "<Role: Corrupt, {uses} uses left>".format(uses=self.poweruses)
 
     def power(self, arg):
         # Indaga sul vero ruolo di una persona, se sono ancora disponibili usi del potere.
