@@ -2,7 +2,7 @@ from .Role import Role
 import strings as s
 
 class Royal(Role):
-    """Un membro della Royal Games. Il ruolo principale, non ha alcun potere se non quello di votare."""
+    """A member of the Royal Games. The main role, has no power other than to vote."""
     icon = s.royal_icon
     team = 'Good'
     name = s.royal_name
