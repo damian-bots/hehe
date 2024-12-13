@@ -3,7 +3,7 @@ import strings as s
 import random
 
 class Investigatore(Role):
-    """L'investigatore può indagare sul vero ruolo di una persona una volta al giorno."""
+    """The investigator can investigate a person's true role once per day."""
     icon = s.detective_icon
     team = 'Good'
     name = s.detective_name
@@ -14,7 +14,7 @@ class Investigatore(Role):
         self.power_was_used = False
 
     def __repr__(self) -> str:
-        return "<Role: Investigatore>"
+        return "<Role: Investigator>"
 
     def power(self, arg):
         # Indaga sul vero ruolo di una persona, se sono ancora disponibili usi del potere.
