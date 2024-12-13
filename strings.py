@@ -1,509 +1,504 @@
-# -*- coding: utf-8 -*-
-# Questo è l'elenco di tutte le stringhe usate in Royal Mifia.
-# Modificando qui si dovrebbe riuscire a tradurre il gioco e rendere la modifica più semplice.
+#-*-Coding: utf-8-*-
+# This is the list of all used strings in Royal Mifia.
+# By changing here you should be able to translate the game and make the change easier.
 
-# Royal: icona
-royal_icon = "\U0001F610"
+# Royal: icon
+Royal_icon = "\ u0001f610"
 
-# Royal: nome ruolo
-royal_name = "Royal"
+# Royal: role name
+Royal_Name = "Royal"
 
-# Mifioso: icona
-mifia_icon = "\U0001F47F"
+# Mifioso: icon
+mifia_icon = "\ u0001f47f"
 
-# Mifioso: nome ruolo
-mifia_name = "Mifioso"
+# Mifioso: role name
+MIFIA_NAME = "Mifioso"
 
-# Mifioso: bersaglio selezionato
-mifia_target_selected = "Hai selezionato come bersaglio @{target}."
+# Mifioso: selected target
+mifia_target_selected = "You have selected as a target @{target}."
 
-# Mifioso: bersaglio ucciso
-mifia_target_killed = "@{target} è stato ucciso dalla Mifia.\n" \
-                      "Era un *{icon} {role}*."
+# Mifioso: target killed
+mifia_target_killed = "@{target} was killed by MIFia. \ n" \
+ "It was an *{icon} {role} *."
 
-# Mifioso: bersaglio protetto da un angelo
-mifia_target_protected = "@{target} è stato protetto dalla Mifia da {icon} @{protectedby}!"
+# Mifioso: target protected by an angel
+MIFIA_TARGET_PROTECTED = " @{Target} has been protected by MIFia by {icon} @{Protectedby}!"
 
-# Mifioso: descrizione del potere
-mifia_power_description = "Puoi selezionare come bersaglio di un'assassinio una persona.\n" \
-                          "Per selezionare un bersaglio, scrivi in questa chat:\n" \
-                          "`/power {gamename} nomeutentebersaglio`\n" \
-                          "Alla fine del giorno, tutti i bersagli dei Mifiosi saranno eliminati!\n"
+# Mifioso: description of power
+MIFIA_POWER_DescStition = "You can select a person as a target of an assassination. \ n" \
+ "To select a target, write in this chat: \ n" \
+ "/Power {Gamename} NametoptentoBersaglio \ n "\
+ "At the end of the day, all the targets of the mifiosi will be eliminated! \ N"
 
-# Mifioso: uccisione fallita
-mifia_target_missed = "@{target} ha subito un tentativo di assassinio da parte della Mifia!\n" \
-                      "Per fortuna, è riuscito a evitare l'attacco."
+# Mifioso: failed killing
+MIFIA_TARGET_MISSED = "@{Target} has undergone an assassination attempt by MIFia! \ n" \
+ "Fortunately, he managed to avoid the attack."
+# Investigator: icon
+Detective_icon = "\ u0001f575"
 
-# Investigatore: icona
-detective_icon = "\U0001F575"
+# Investigator: role name
+detective_name = "investigator"
 
-# Investigatore: nome ruolo
-detective_name = "Investigatore"
+# Investigator: discovery new information
+detective_discovery = "you are sure to *{target_score}% *that @{target} is an *{icon} {role} *."
 
-# Investigatore: scoperta nuove informazioni
-detective_discovery = "Sei sicuro al *{target_score}%* che @{target} sia un *{icon} {role}*."
+# Investigator: Description of power
+detective_power_descition = "You can try to discover the role of one person every day. \ n" \
+ "It is not guaranteed that the investigation is successful, but the probability is quite high and will be announced to you. \ N" \
+ "To investigate someone, write in this chat: \ n" \
+ "/Power {Gamename} NametoptentoBersaglio \ n "
 
-# Investigatore: descrizione del potere
-detective_power_description = "Puoi provare a scoprire il ruolo di una persona ogni giorno.\n" \
-                              "Non è garantito che l'investigazione abbia successo, ma la probabilità è piuttosto alta e ti verrà annunciata.\n" \
-                              "Per indagare su qualcuno, scrivi in questa chat:\n" \
-                              "`/power {gamename} nomeutentebersaglio`\n"
+# Angelo: icon
+Angel_icon = "\ u0001f607"
 
-# Angelo: icona
-angel_icon = "\U0001F607"
+# Angelo: role name
+angel_name = "angel"
 
-# Angelo: nome ruolo
-angel_name = "Angelo"
+# Angelo: selected target
+angel_target_selected = "You have selected as a protected @{Target}."
 
-# Angelo: bersaglio selezionato
-angel_target_selected = "Hai selezionato come protetto @{target}."
+# Angelo: Description of power
+Angel_power_description = "You can protect a person from Mifia every night. \ n" \
+ "If this person is attacked, he will remain alive, and your role will be discovered. \ N" \
+ "To protect a person, write in this chat: \ n" \
+ "/Power {Gamename} NametoptentoBersaglio \ n "
 
-# Angelo: descrizione del potere
-angel_power_description = "Puoi proteggere una persona dalla Mifia ogni notte.\n" \
-                          "Se questa persona verrà attaccata, rimarrà viva, e il tuo ruolo sarà scoperto.\n" \
-                          "Per proteggere una persona, scrivi in questa chat:\n" \
-                          "`/power {gamename} nomeutentebersaglio`\n"
+# Terrorist: icon
+terrorist_icon = "\ u0001f60e"
 
-# Terrorista: icona
-terrorist_icon = "\U0001F60E"
+# Terrorist: role name
+terrorist_name = "terrorist"
 
-# Terrorista: nome ruolo
-terrorist_name = "Terrorista"
+# Terrorist: description of power
+terrorist_power_descition = "You can blow up a lot of people! \ n" \
+ "If you are voted as guilty of mifous association, you can detonate everyone" \
+ "Those who voted for you! \ n" \
+ "Mifia does not know who you are, but you are part of the wicked team. \ N"
 
-# Terrorista: descrizione del potere
-terrorist_power_description = "Puoi fare saltare in aria un sacco di persone!\n" \
-                              "Se vieni votato come colpevole di associazione mifiosa, potrai fare esplodere tutti" \
-                              " quelli che ti hanno votato!\n" \
-                              "La mifia non sa chi sei, ma fai parte della squadra dei malvagi.\n"
+# Terrorist: explosion
+terrorist_kaboom = "\ u0001f4a3 * boom! * The terrorist exploded before you could kill him, reaping victims among all" \
+ "Those who voted for him!"
 
-# Terrorista: esplosione
-terrorist_kaboom = "\U0001F4A3 *Boom!* Il terrorista si è fatto esplodere prima che poteste ucciderlo, mietendo vittime tra tutti" \
-                   " quelli che lo hanno votato!"
+# Terrorist: target killed
+terrorist_target_killed = "\ u0001f4a3 * boom! * @{target} died due to the explosion! \ n" \
+ "It was an *{icon} {role} *."
 
-# Terrorista: bersaglio ucciso
-terrorist_target_killed = "\U0001F4A3 *Boom!* @{target} è morto a causa dell'esplosione!\n" \
-                          "Era un *{icon} {role}*."
+# Derek: icon
+Derek_icon = "\ u0001f635"
 
-# Derek: icona
-derek_icon = "\U0001F635"
+# Derek: role name
+Derek_name = "Derek"
 
-# Derek: nome ruolo
-derek_name = "Derek"
+# Derek: Description of power
+Derek_power_description = "You can decide to commit suicide at the end of a round. \ n" \
+ "You could do it to confuse ideas from the royal, or to ragequitu with style. \ N" \
+ "The choice is up to you. \ N" \
+ "To leave this world at the end of the day, write in this chat: \ n" \
+ "/Power {Gamename} banana \ n "
 
-# Derek: descrizione del potere
-derek_power_description = "Puoi decidere di suicidarti alla fine di un round.\n" \
-                          "Potresti farlo per confondere le idee ai Royal, o per ragequittare con stile.\n" \
-                          "Sta a te la scelta.\n" \
-                          "Per lasciare questo mondo alla fine del giorno, scrivi in questa chat:\n" \
-                          "`/power {gamename} banana`\n"
+# Derek: Death activated
+Derek_deathwish_set = "* I will die* at the end of this day."
 
-# Derek: morte attivata
-derek_deathwish_set = "*Morirai* alla fine di questo giorno."
+# Derek: death deactivated
+Derek_deathwish_unset = "* you will live* to die another day."
 
-# Derek: morte disattivata
-derek_deathwish_unset = "*Vivrai* per morire un altro giorno."
+# Derek: Death
+Derek_deathwish_sucesssful = "* Spoiler:* At the end of this day* \ u0001f635 Derek Shepard* (@{Name}) died crushed by a container during a mission on ilium. \ n"
 
-# Derek: morte
-derek_deathwish_successful = "*SPOILER:* alla fine di questo giorno *\U0001F635 Derek Shepard* (@{name}) è morto schiacciato da un container durante una missione su Ilium.\n"
+# Disaster: icon
+disaster_icon = "\ u0001f46e"
 
-# Disastro: icona
-disaster_icon = "\U0001F46E"
+# Disaster: role name
+Disaster_name = "carabiniere"
 
-# Disastro: nome ruolo
-disaster_name = "Carabiniere"
+# Mom: icon
+Mom_icon = "\ u0001f917"
 
-# Mamma: icona
-mom_icon = "\U0001F917"
+# Mom: role name
+Mom_Name = "mom"
 
-# Mamma: nome ruolo
-mom_name = "Mamma"
+# Mom: Description of power
+Mom_power_description = "During the game you will discover the roles of some players. \ n" \
+ "Unlike the investigator, you are infallible. \ N"
 
-# Mamma: descrizione del potere
-mom_power_description = "Durante la partita scoprirai i ruoli di alcuni giocatori.\n" \
-                        "A differenza dell'Investigatore, sei infallibile.\n"
+# Mom: discovery of a role
+Mom_discovery = "You discovered that @{target} is an *{icon} {role} *. \ n" \
 
-# Mamma: scoperta di un ruolo
-mom_discovery = "Hai scoperto che @{target} è un *{icon} {role}*.\n" \
+# Stagista: icon
+Intern_icon = "\ u0001f913"
 
-# Stagista: icona
-intern_icon = "\U0001F913"
+# Stagista: role name
+Intern_Name = "Stagista"
 
-# Stagista: nome ruolo
-intern_name = "Stagista"
+# Stagista: Description of power
+Intern_power_descStition = "At any time of the game you can choose another player. \ n" \
+ "Your role will become the same as his. \ N" \
+ "Remember that, whatever happens, it's always the fault of the intern, that is yours! \ N" \
+ "To go to internship, write in this chat: \ n" \
+ "/Power {Gamename} Namedatoredilavoro name "
 
-# Stagista: descrizione del potere
-intern_power_description = "In qualsiasi momento della partita puoi scegliere un altro giocatore.\n" \
-                           "Il tuo ruolo diventerà uguale al suo.\n" \
-                           "Ricordati che, qualsiasi cosa succeda, è sempre colpa dello stagista, cioè tua!\n" \
-                           "Per andare in stage, scrivi in questa chat:\n" \
-                           "`/power {gamename} nomeutentedatoredilavoro`"
+# Stagista: the internship begins
+Intern_started_internership = "you will go to internship from @{Master}."
 
-# Stagista: inizia lo stage
-intern_started_internship = "Andrai in stage da @{master}."
+# Stagista: changed role
+Intern_Changed_Role = "The intern finished the internship and learned the secrets of the profession of *{icon} {role} *."
 
-# Stagista: cambiato ruolo
-intern_changed_role = "Lo stagista ha finito il tirocinio ed ha imparato i segreti del mestiere di *{icon} {role}*."
+# Stagista: evoked the Lord of chaos
+Intern_chaos_summoned = "The * \ u0001f479 Lord of chaos * and his faithful servant took to earth. \ n" \
+ "Get ready ... to not understand anything anymore."
 
-# Stagista: EVOCATO IL SIGNORE DEL CAOS
-intern_chaos_summoned = "Il *\U0001F479 Signore del Caos* e il suo fedele servitore sono scesi sulla Terra.\n" \
-                        "Preparatevi... a non capirci più niente."
+# Corrupt: icon
+corrupt_icon = "\ u0001f482"
 
-# Corrotto: icona
-corrupt_icon = "\U0001F482"
+# Corrupt: role name
+corrupt_name = "corrupt"
 
-# Corrotto: nome ruolo
-corrupt_name = "Corrotto"
+# Corrupt: power description
+corrupt_power_descition = "You can investigate the real role of a person once a day. \ n" \
+ "To investigate someone, write in this chat: \ n" \
+ "/Power {Gamename} NametoptentoBersaglio \ n "\
+ "You are practically an investigator, only that you work for the Mifia! \ N"
 
-# Corrotto: descrizione potere
-corrupt_power_description = "Puoi indagare sul vero ruolo di una persona una volta al giorno.\n" \
-                            "Per indagare su qualcuno, scrivi in questa chat:\n" \
-                            "`/power {gamename} nomeutentebersaglio`\n" \
-                            "Sei praticamente un Investigatore, solo che lavori per la Mifia!\n"
+# Ladies of chaos: icon
+chaos_lord_icon = "\ u0001f479"
 
-# Signore del Caos: icona
-chaos_lord_icon = "\U0001F479"
+# Ladies of chaos: role name
+Chaos_lord_name = "Lord of chaos"
 
-# Signore del Caos: nome ruolo
-chaos_lord_name = "Signore del Caos"
+# Lord of chaos: description of power
+chaos_lord_power_descition = "you are the *lord of chaos *! \ n" \
+ "Mortal affairs are not interested in, so you are not part of the MIFia team or of the Royal team. \ N" \ \
+ "Consequently, you automatically have the match _! \ N" \
+ "You can use your chaos powers to change role to another player. \ N" \
+ "The role it receives will be random. \ N" \
+ "To use your powers, write in this chat: \ n" \
+ " /Power {Gamename} NametoptentoBegeglio"
 
-# Signore del Caos: descrizione del potere
-chaos_lord_power_description = "Sei il *SIGNORE DEL CAOS*!\n" \
-                               "Le faccende dei mortali non ti interessano, quindi non fai parte nè del team Mifia nè del team Royal.\n" \
-                               "Di conseguenza, hai automaticamente _vinto la partita_!\n" \
-                               "Puoi usare i tuoi poteri del Caos per cambiare ruolo a un altro giocatore.\n" \
-                               "Il ruolo che riceverà sarà casuale.\n" \
-                               "Per usare i tuoi poteri, scrivi in questa chat:\n" \
-                               "`/power {gamename} nomeutentebersaglio`"
+# Ladies of chaos: selected target
+chaos_lord_target_selected = "bwhahaha. You decided to use your chaos powers on @{target}."
 
-# Signore del Caos: bersaglio selezionato
-chaos_lord_target_selected = "BWHAHAHA. Hai deciso di usare i tuoi poteri del Caos su @{target}."
+# Ladies of chaos: randomized target
+chaos_lord_randomized = "chaos is in the air ... \ n" \
+ "*Someone has changed role!*"
 
-# Signore del Caos: bersaglio randomizzato
-chaos_lord_randomized = "Il Caos è nell'aria...\n" \
-                        "*Qualcuno ha cambiato ruolo!*"
+# Lord of chaos: bankruptcy randomization
+chaos_lord_failed = "chaos is in the air ... \ n" \
+ "_Ma nothing happened!? _"
 
-# Signore del Caos: randomizzazione fallita
-chaos_lord_failed = "Il Caos è nell'aria...\n" \
-                    "_Ma non è successo nulla!?_"
+# Servant of the chaos: role name
+Chaos_Servant_name = "Caos servant"
 
-# Servitore del Caos: nome ruolo
-chaos_servant_name = "Servitore del Caos"
+# User of chaos: icon
+Chaos_Servant_icon = "\ u0001f468 \ u200d \ u0001f3a4"
 
-# Servitore del Caos: icona
-chaos_servant_icon = "\U0001F468\u200d\U0001F3A4"
+# User of chaos: power description
+Chaos_Servant_power_description = "The Lord of chaos will give you his powers when he died. \ n" \
+ "Being part of the faction of the chaos, you automatically _vy the game_!"
 
-# Servitore del Caos: descrizione potere
-chaos_servant_power_description = "Il Signore del Caos ti cederà i suoi poteri quando sarà morto.\n" \
-                                  "Facendo parte della fazione del Caos, hai automaticamente _vinto la partita_!"
+# Vigilante: role name
+Vigilante_name = "vigilante"
 
-# Vigilante: nome ruolo
-vigilante_name = "Vigilante"
+# Vigilante: icon
+Vigilante_icon = "🤠"
 
-# Vigilante: icona
-vigilante_icon = "🤠"
+# Vigilante: power description
+Vigilante_power_description = "You can choose a person to kill anonymously at the end of the day. \ n" \
+ "Be careful not to kill your ally Royal: you are in the team with them! \ N" \
+ "To kill someone, write in this chat: \ n" \
+ " /Power {Gamename} NametoptentoBegeglio`"
 
-# Vigilante: descrizione potere
-vigilante_power_description = "Puoi scegliere una persona da uccidere anonimamente alla fine della giornata.\n" \
-                              "Fai attenzione a non uccidere un tuo alleato Royal: sei in squadra con loro!\n" \
-                              "Per uccidere qualcuno, scrivi in questa chat:\n" \
-                              "`/power {gamename} nomeutentebersaglio`"
+# Vigilante: Chosen target
+Vigilante_target_selected = "You are aiming for your gun against @{target}."
 
-# Vigilante: bersaglio scelto
-vigilante_target_selected = "Stai puntando la tua pistola contro @{target}."
+# Vigilante: execution
+Vigilante_execution = "@{Target} was carried out by a vigilante of the Royal Games. \ n" \
+ "It was an *{icon} {role} *."
 
-# Vigilante: esecuzione
-vigilante_execution = "@{target} è stato eseguito da un Vigilante della Royal Games.\n" \
-                      "Era un *{icon} {role}*."
+# User of chaos: the powers inherited
+Chaos_Servant_inherited = "The servant inherited the powers of the *\ u0001f479 Lord of the chaos *."
 
-# Servitore del Caos: ereditato i poteri
-chaos_servant_inherited = "Il servitore ha ereditato i poteri del *\U0001F479 Signore del Caos*."
+# General: role assigned
+Role_assigned = "You have been assigned the role of *{icon} {name} *."
 
-# Generale: ruolo assegnato
-role_assigned = "Ti è stato assegnato il ruolo di *{icon} {name}*."
+# General: player killed by votes
+Player_lynced = "@{Name} was the most voted and was killed by the Royal. \ n" \
+ "It was an *{icon} {role} *."
 
-# Generale: giocatore ucciso dalle votazioni
-player_lynched = "@{name} era il più votato ed è stato ucciso dai Royal.\n" \
-                 "Era un *{icon} {role}*."
+# General: no vote, no player killed
+No_players_lynced = "Royal Games did not come to a decision on this day and has not killed anyone."
 
-# Generale: nessun voto, nessun giocatore ucciso
-no_players_lynched = "La Royal Games non è giunta a una decisione in questo giorno e non ha ucciso nessuno."
+# General: game created
+New_Game = "A new match was created in this group. \ n" \
+ "* Name:* {Name}"
 
-# Generale: partita creata
-new_game = "E' stata creata una nuova partita in questo gruppo.\n" \
-           "*Nome:* {name}"
+# General: A player has joined
+player_joined = "@{name} has joined the game!\n" \
+"There are now {players} players in the game."
 
-# Generale: un giocatore si è unito
-player_joined = "@{name} si è unito alla partita!\n" \
-                "Adesso ci sono {players} giocatori in partita."
+# General: You have joined the game, in private chat
+you_joined = "You have joined the game _{game}_!\n" \
+"Your role will be assigned as soon as @{adminname} closes registrations."
 
-# Generale: ti sei unito alla partita, in chat privata
-you_joined = "Ti sei unito alla partita _{game}_!\n" \
-             "Il ruolo ti verrà assegnato appena @{adminname} chiuderà le iscrizioni."
+# General: Join phase ended
+join_phase_ended = "The join phase has ended."
 
-# Generale: fine della fase di join
-join_phase_ended = "La fase di join è terminata."
+# General: Roles assigned successfully
+roles_assigned_successfully = "Roles have been assigned.\n" \
+"Check your private chat with @mifiabot to see yours."
 
-# Generale: ruoli assegnati correttamente
-roles_assigned_successfully = "I ruoli sono stati assegnati.\n" \
-                              "Controlla la chat privata con @mifiabot per vedere il tuo."
+# General: Tell mifiosi about their teammates
+mifia_team_intro = "The mifiosi in this game are:\n"
 
-# Generale: comunica ai mifiosi i loro compagni di squadra
-mifia_team_intro = "I mifiosi in questa partita sono:\n"
-
-# Generale: formattazione elenco mifiosi (deve terminare con \n)
+# General: Formatting mifiosi list (must end with \n)
 mifia_team_player = "{icon} @{name}\n"
 
-# Generale: votazione completata
-vote = "@{voting} ha votato per uccidere @{voted}."
+# General: Voting completed
+vote = "@{voting} voted to kill @{voted}."
 
-# Generale: votazione annullata
-vote_none = "{player} ha annullato il suo voto."
+# General: Voting cancelled
+vote_none = "{player} cancelled their vote."
 
-# Generale: votazione completata in prima persona
-vote_fp = "Hai votato per uccidere @{voted}."
+# General: Voting completed in first person
+vote_fp = "You voted to kill @{voted}."
 
-# Generale: votazione annullata in prima persona
-vote_none_fp = "Hai annullato il tuo voto."
+# General: Voting cancelled in first person
+vote_none_fp = "You cancelled your vote."
 
-# Generale: un admin ha ucciso un giocatore con /kill
-admin_killed = "{name} è morto _di infarto_.\n" \
-               "Era un *{icon} {role}*."
+# General: An admin killed a player with /kill
+admin_killed = "{name} died _of a heart attack_.\n" \
+"It was a *{icon} {role}*."
 
-# Generale: inviato messaggio in chat privata
-check_private = "Messaggio inviato in chat privata.\n" \
-                "Controlla @mifiabot."
+# General: Message sent in private chat
+check_private = "Message sent in private chat.\n" \
+"Check @mifiabot."
 
-# Generale: partita salvata
-game_saved = "Partita _{name}_ salvata su file."
+# General: Game saved
+game_saved = "Game _{name}_ saved to file."
 
-# Generale: partita caricata
-game_loaded = "Partita caricata da file."
+# General: Game loaded
+game_loaded = "Game loaded from file."
 
-# Generale: partita terminata remotamente dal proprietario del bot
-owner_ended = "Il proprietario del bot ha eliminato questa partita."
+# General: Game ended remotely by bot owner
+owner_ended = "Bot owner deleted this game."
 
-# Vittoria: Mifia >= Royal
-end_mifia_outnumber = "I Mifiosi rimasti sono più dei Royal.\n" \
-                      "La Mifia ha preso il controllo della città.\n"
+# Victory: Mifia >= Royal
+end_mifia_outnumber = "The remaining Mifiosi outnumber the Royals.\n" \
+"Mifia has taken over the city.\n"
 
-# Vittoria: Mifia == 0
-end_mifia_killed = "Tutti i Mifiosi sono stati eliminati.\n"
+# Victory: Mifia == 0
+end_mifia_killed = "All the Mifiosi have been eliminated.\n"# Victory: No one alive lol
+end_game_wiped = "No one is alive anymore. The human species is extinct.\n"
 
-# Vittoria: nessuno vivo lol
-end_game_wiped = "Nessuno è più vivo. La specie umana si è estinta.\n"
+# Victory: You are a Lord of Chaos.
+end_game_chaos = "You are a Lord of Chaos."
 
-# Vittoria: Sei un Signore del Caos.
-end_game_chaos = "Sei un Signore del Caos."
+# General: Choose who to vote for
+vote_keyboard = "Choose who you want to lynch!\n" \
+"If multiple players have the same number of votes, one of them will be selected to be lynched.\n" \
+"If no one has voted, "
 
-# Generale: scegli per chi votare
-vote_keyboard = "Scegli chi vuoi linciare!\n" \
-                "Se più giocatori hanno lo stesso numero di voti, uno tra loro verrà selezionato per essere linciato.\n" \
-                "Se nessuno ha votato, "
-
-# Generale: riga della tastiera del voto
+# General: Vote keyboard line
 vote_keyboard_line = "{status} {votes} - {player}"
 
-# Generale: riga della tastiera per annullare il voto
-vote_keyboard_nobody = "\u2796 Nessuno"
+# General: Cancel vote keyboard line
+vote_keyboard_nobody = "\u2796 Nobody"
 
-# Generale: inizia un nuovo giorno
-new_day = "Sorge l'alba del giorno *{day}*!"
+# General: Start a new day
+new_day = "The dawn of day *{day}*!"
 
-# Vittoria: team Royal
-victory_royal = "*La Royal Games vince!*"
+# Victory: Team Royal
+victory_royal = "*Royal Games wins!*"
 
-# Vittoria: team Mifia
-victory_mifia = "*La Mifia vince!*"
+# Victory: Team Mifia
+victory_mifia = "*Mifia wins!*"
 
-# Vittoria!
-victory = "*Hai vinto!*"
+# Victory!
+victory = "*You win!*"
 
-# Sconfitta.
-defeat = "*Hai perso...*"
+# Defeat.
+defeat = "*You lost...*"
 
-# Pareggio?
-tie = "*Pareggio?*"
+# Draw?
+tie = "*Draw?*"
 
-# Status: parte aggiunta prima dell'elenco dei giocatori (deve terminare con \n)
-status_header = "*Nome:* {name}\n" \
-                "*Creatore:* {admin}\n" \
-                "*Fase:* {phase}\n" \
-                "*Giocatori partecipanti:*\n"
+# Status: Part added before the player list (must end with \n)
+status_header = "*Name:* {name}\n" \
+"*Creator:* {admin}\n" \
+"*Phase:* {phase}\n" \
+"*Players participating:*\n"
+# Status: Part added before the final roster reveal
+status_final_header = "*Match Roles {name}:*\n"
 
-# Status: parte aggiunta prima della rivelazione finale dei ruoli
-status_final_header = "*Ruoli della partita {name}:*\n"
-
-# Status: giocatore vivo durante la prima giornata / fase di join (deve terminare con \n)
+# Status: Player alive during Day 1 / Join Phase (must end with \n)
 status_basic_player = "{icon} {player}\n"
 
-# Status: risultati finali della partita
+# Status: Final Match Results
 
-# Status: giocatore vivo (deve terminare con \n)
-status_alive_player = "{icon} {player} __(vota per {target})__\n"
+# Status: Player Alive (must end with \n)
+status_alive_player = "{icon} {player} (vote for {target})\n"
 
-# Status: giocatore morto (deve terminare con \n)
+# Status: Player Dead (must end with \n)
 status_dead_player = "\U0001F480 {player}\n"
 
-# Status: giocatore più votato della partita
+# Status: Most voted player in the game
 status_most_voted = "\U0001F534"
 
-# Status: voti giocatore normali
+# Status: Normal player votes
 status_normal_voted = "\u26AA"
 
-# Status: Modalità debug
+# Status: Debug mode
 debug_mode = "*DEBUG/CHEATS MODE*\n"
 
 # Ping!
 pong = "Pong!"
 
-# Attenzione: il bot non è amministratore
-warning_bot_not_admin = "\U000026A0 Attenzione! Il bot non è amministratore in questo supergruppo.\n" \
-                        "E' possibile comunque giocare una partita, ma alcune funzioni non saranno disponibili."
+# Warning: Bot not admin
+warning_bot_not_admin = "\U000026A0 Warning! Bot not admin in this supergroup.\n" \
+"You can still play a game, but some features will not be available."
 
-# Errore: nome utente inesistente
-error_username = "\U000026A0 Il nome utente specificato non esiste."
+# Error: Username does not exist
+error_username = "\U000026A0 The specified username does not exist."
 
-# Errore: usi del potere esauriti
-error_no_uses = "\U000026A0 Hai finito gli utilizzi del tuo potere."
+# Error: Power uses exhausted
+error_no_uses = "\U000026A0 You have run out of uses for your power."
 
-# Errore: numero troppo basso di giocatori
-error_not_enough_players = "\U000026A0 Non ci sono abbastanza giocatori per avviare la partita."
+# Error: Number of players too low
+error_not_enough_players = "\U000026A0 There are not enough players to start the game."
 
-# Errore: partita già in corso nel gruppo
-error_game_in_progress = "\U000026A0 In questo gruppo è già in corso una partita."
+# Error: Game already in progress in party
+error_game_in_progress = "\U000026A0 There is already a game in progress in this party."
 
-# Errore: tipo di chat non supportato
-error_chat_type = "\U000026A0 Non puoi creare una partita in questo tipo di chat."
+# Error: Unsupported chat type
+error_chat_type = "\U000026A0 You cannot create a game in this chat type."
 
-# Errore: per usare questo comando, devi scrivere in chat privata
-error_private_required = "\U000026A0 Non puoi usare questo comando in un gruppo.\n" \
-                         "Scrivimi in chat privata a @mifiabot."
+# Error: You must write in private chat to use this command
+error_private_required = "\U000026A0 You cannot use this command in a group.\n" \
+"Write me in private chat at @mifiabot."
 
-# Errore: giocatore già presente nella partita.
-error_player_already_joined = "\U000026A0 Ti sei già unito alla partita."
+# Error: Player already in game.
+error_player_already_joined = "\U000026A0 You have already joined the game."
 
-# Errore: nessuna partita trovata
-error_no_games_found = "\U000026A0 Non è stata trovata una partita su cui usare il comando."
+# Error: No games found
+error_no_games_found = "\U000026A0 No game found to use this command on."
 
-# Errore: sei morto
-error_dead = "\U000026A0 Sei morto."
+# Error: You are dead
+error_dead = "\U000026A0 You are dead."
 
-# Errore: il bersaglio è morto
-error_target_is_dead = "\U000026A0 Non puoi bersagliare giocatori morti."
+# Error: Target is dead
+error_target_is_dead = "\U000026A0 You cannot target dead players."
 
-# Errore: azione riservata agli admin
-error_not_admin = "\U000026A0 Questa azione è riservata al creatore della partita."
+# Error: Admin-only action
+error_not_admin = "\U000026A0 This action is only available to the creator of the game."
 
-# Errore: azione riservata al proprietario
-error_not_owner = "\U000026A0 Questa azione è riservata al proprietario del bot."
+# Error: Owner-only action
+error_not_owner = "\U000026A0 This action is only available to the bot owner."
 
-# Errore: non sei nella partita
-error_not_in_game = "\U000026A0 Non fai parte della partita in corso."
+# Error: Not in game
+error_not_in_game = "\U000026A0 You are not part of the current game."
 
-# Errore: fase di join finita
-error_join_phase_ended = "\U000026A0 La fase di unione è finita."
+# Error: Join phase ended
+error_join_phase_ended = "\U000026A0 The join phase has ended."
 
-# Errore: non puoi usare il potere su te stesso
-error_no_selfpower = "\U000026A0 Non puoi usare il potere su te stesso."
+# Error: You cannot use power on yourself
+error_no_selfpower = "\U000026A0 You cannot use power on yourself."
 
-# Errore: parametro della configurazione non valido
-error_invalid_config = "\U000026A0 Configurazione non valida."
+# Error: Invalid configuration parameter
+error_invalid_config = "\U000026A0 Invalid configuration."
 
-# Errore: il giocatore non ha mai scritto un messaggio in chat privata al bot
-error_chat_unavailable = "\U000026A0 Non hai mai scritto un messaggio in chat privata a @mifiabot!\n" \
-                         "Scrivigli nella chat privata `/start` e riprova."
+# Error: Player has never written a private chat message to the bot
+error_chat_unavailable = "\U000026A0 You have never written a private chat message to @mifiabot!\n" \
+"Write to him in private chat /start and try again."
 
-# Erorre: nessun username
-error_no_username = "\U000026A0 Non hai nessun username di Telegram!\n" \
-                    "Vai nelle impostazioni e inseriscine uno!"
+# Error: No username
+error_no_username = "\U000026A0 You do not have a Telegram username!\n" \
+"Go to settings and enter one!"
 
-# Errore: non si può votare nella prima giornata
-error_no_votes_on_first_day = "\U000026A0 I Royal non votano nella prima giornata, dato che non si sono ancora verificati omicidii."
+# Error: No voting on first day
+error_no_votes_on_first_day = "\U000026A0 Royals are not voting on first day, as no murders have occurred yet."
 
-# Errore: mancano dei parametri nel comando
-error_missing_parameters = "\U000026A0 Mancano uno o più parametri.\n" \
-                           "Controlla la sintassi del comando e riprova."
+# Error: Command missing parameters
+error_missing_parameters = "\U000026A0 One or more parameters are missing.\n" \
+"Please check the syntax of the command and try again."
 
-# Critico: Server di telegram Timed Out
-fatal_bot_timed_out = "\U0001F6D1 **Errore critico:** I server di Telegram non hanno risposto in tempo al messaggio.\n" \
-                      "Se una partita era in corso, potrebbero essersi creati dei bug.\n" \
-                      "E' consigliato cancellarla e ricaricare l'ultimo salvataggio disponibile."
+# Critical: Telegram Server Timed Out
+fatal_bot_timed_out = "\U0001F6D1 Critical Error: Telegram servers did not respond to your message in time.\n" \
+"If a game was in progress, there may be bugs.\n" \
+"It is recommended to cancel the game and reload the last available save."
 
-# Critico: Rate limited
-fatal_bot_rate_limited = "\U0001F6D1 **Errore critico:** Il bot ha inviato troppe richieste a Telegram ed è stato bloccato.\n" \
-                         "Se una partita era in corso, potrebbero essersi creati dei bug.\n" \
-                         "E' consigliato attendere 5 minuti, cancellarla e ricaricare l'ultimo salvataggio disponibile."
+# Critical: Rate limited
+fatal_bot_rate_limited = "\U0001F6D1 Critical error: The bot sent too many requests to Telegram and was blocked.\n" \
+"If a game was in progress, there may be bugs.\n" \
+"It is recommended to wait 5 minutes, cancel it and reload the last available save."
 
-# Lista dei possibili nomi di una partita
-if __debug__:
-    names_list = ["Dev"]
+# List of possible names for a game
+if debug:
+names_list = ["Dev"]
 else:
-    names_list = ["Tredici"]
+names_list = ["Thirteen"]
 
-# Scegli il preset
-preset_choose = "*Seleziona un preset per la partita:*" 
+# Select preset
+preset_choose = "*Select a preset for the game:*"
 
-# Preset semplice
-preset_simple = "Semplice"
+# Simple preset
+preset_simple = "Simple"
 
-# Preset semplice selezionato
-preset_simple_selected = "Selezionato il preset *Semplice*.\n" \
-                         "In partita saranno presenti:\n" \
-                         "*{mifioso}* Mifiosi,\n" \
-                         "*{investigatore}* Investigatori\n" \
-                         "e *{royal}* Royal."
+# Simple preset selected
+preset_simple_selected = "*Simple* preset selected.\n" \
+"The game will feature:\n" \
+"*{mifioso}* Mifiosi,\n" \
+"*{investigatore}* Investigatori\n" \
+"and *{royal}* Royal."
 
-# Preset classico
-preset_classic = "Classico"
+# Classic Preset
+preset_classic = "Classic"
 
-# Preset classico selezionato
-preset_classic_selected = "Selezionato il preset *Classico*.\n" \
-                          "In questa partita saranno presenti:\n" \
-                          "*{mifioso}* Mifiosi,\n" \
-                          "*{investigatore}* Investigatori,\n" \
-                          "*{angelo}* Angeli,\n" \
-                          "*forse* un Terrorista \n" \
-                          "e *{royalmenouno}* o *{royal}* Royal.\n" \
+# Classic Preset Selected
+preset_classic_selected = "*Classic* preset selected.\n" \
+"This match will feature:\n" \
+"*{mifioso}* Mifiosi,\n" \
+"*{investigatore}* Investigatori,\n" \
+"*{angelo}* Angels,\n" \
+"*maybe* a Terrorist \n" \
+"and *{royalmenouno}* or *{royal}* Royal.\n" \
 
-# Preset avanzato
-preset_advanced = "Avanzato"
+# Advanced Preset
+preset_advanced = "Advanced"
 
-# Preset avanzato selezionato
-preset_advanced_selected = "Selezionato il preset *Avanzato*.\n" \
-                           "I ruoli in questa partita sono casuali!\n" \
-                           "Inoltre, ogni mifioso può uccidere una persona diversa ogni giorno...\n"
+# Advanced Preset Selected
+preset_advanced_selected = "*Advanced* preset selected.\n" \
+"The roles in this match are random!\n" \
+"Also, each mifioso can kill a different person each day...\n"
 
-# Partita in cui i Mifiosi hanno un grande vantaggio (<-30)
-balance_mifia_big = "_La mifia ha un grande vantaggio in questa partita.\n" \
-                    "Buona fortuna, Royal Games, ne avrete bisogno!_"
+# Match where the Mifiosi have a big advantage (<-30)
+balance_mifia_big = "_Mifia has a big advantage in this match.\n" \
+"Good luck, Royal Games, you'll need it!_"
 
-# Partita in cui i Royal hanno un grande vantaggio (>+30)
-balance_royal_big = "_La Royal Games ha un grande vantaggio in questa partita.\n" \
-                    "State attenti, Mifiosi!_"
+# Match where Royals have a big advantage (>+30)
+balance_royal_big = "_Royal Games has a big advantage in this match.\n" \
+"Be careful, Mifiosi!_"
 
-# Partita in cui i Mifiosi hanno un leggero vantaggio (>-30)
-balance_mifia_small = "_La mifia è leggermente avvantaggiata in questa partita._"
+# Match where Mifiosi have a slight advantage (>-30)
+balance_mifia_small = "_Mifia has a slight advantage in this match._"
+# Match where Royals have a slight advantage (<+30)
+balance_royal_small = "_Royal Games has a slight advantage in this match._"
 
-# Partita in cui i Royal hanno un leggero vantaggio (<+30)
-balance_royal_small = "_La Royal Games è leggermente avvantaggiata in questa partita._"
+# Balanced match (-5<x<5)
+balance_perfect = "_The match seems balanced for both teams, no one seems to have a big advantage.\n" \
+"Good luck to everyone!_"
 
-# Partita bilanciata (-5<x<5)
-balance_perfect = "_La partita sembra bilanciata per entrambe le squadre, nessuno sembra avere un grosso vantaggio.\n" \
-                  "Buona fortuna a tutti!_"
-
-# Preset con uno di tutti
+# Preset with one of all
 preset_oneofall = "Round Robin"
 
-# Preset con uno di tutti selezionato
-preset_oneofall_selected = "Selezionato il preset *Round Robin*.\n" \
-                           "In questa partita saranno presenti lo stesso numero di tutti i ruoli.\n" \
-			               "Se sono presenti giocatori in eccesso, verrà assegnato loro un ruolo casuale."
+# Preset with one of all selected
+preset_oneofall_selected = "*Round Robin* preset selected.\n" \
+"This match will have the same number of all roles.\n" \
+"If there are excess players, they will be assigned a random role."
 
-# Preset selezionato
-preset_selected = "Preset selezionato: {selected}"
+# Preset selected
+preset_selected = "Preset selected: {selected}"
 
-# Nome gruppo
+# Group name
 group_name = "{phase} - Mifia {name}"
 
-# Giorno
+# Day
 day = "Day {day}"
