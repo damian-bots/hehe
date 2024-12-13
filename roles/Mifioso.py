@@ -2,7 +2,7 @@ from .Role import Role
 import strings as s
 
 class Mifioso(Role):
-    """Il nemico globale. Può impostare come bersaglio una persona al giorno, per poi ucciderla alla fine."""
+    """The global enemy. It can target one person per day, then kill them at the end.."""
     icon = s.mifia_icon
     team = 'Evil'
     name = s.mifia_name
@@ -14,9 +14,9 @@ class Mifioso(Role):
 
     def __repr__(self) -> str:
         if self.target is None:
-            return "<Role: Mifioso>"
+            return "<Role: Mafia>"
         else:
-            return "<Role: Mifioso, targeting {target}>".format(target=self.target.tusername)
+            return "<Role: Mafia, targeting {target}>".format(target=self.target.tusername)
 
     def power(self, arg):
         # Imposta una persona come bersaglio da uccidere.
