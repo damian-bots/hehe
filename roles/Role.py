@@ -1,6 +1,6 @@
 # Base di un ruolo
 class Role:
-    """Classe base di un ruolo. Da qui si sviluppano tutti gli altri ruoli."""
+    """Base class of a role. All other roles develop from here."""
     icon = "-"  # Icona del ruolo, da visualizzare di fianco al nome
     team = 'None'  # Squadra: 'None', 'Good', 'Evil', 'Chaos'; conta per le condizioni di vittoria
     name = "UNDEFINED"  # Nome del ruolo, viene visualizzato dall'investigatore e durante l'assegnazione
@@ -16,17 +16,17 @@ class Role:
         return "{} {}".format(self.icon, self.name)
 
     def power(self, arg):
-        """Il potere del ruolo. Si attiva quando il bot riceve un /power in chat privata."""
+        """The power of the role. It is activated when the bot receives a /power in private chat."""
         pass
 
     def onendday(self):
-        """Metodo chiamato alla fine di ogni giorno."""
+        """Method called at the end of each day."""
         pass
 
     def ondeath(self):
-        """Metodo chiamato alla morte del giocatore."""
+        """Method called upon player death."""
         pass
 
     def onstartgame(self):
-        """Metodo chiamato all'inizio della partita."""
+        """Method called at the start of the game."""
         pass
