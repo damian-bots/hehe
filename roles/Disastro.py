@@ -3,7 +3,7 @@ import strings as s
 import random
 
 class Disastro(Role):
-    """L'investigatore sbadato investiga, ma giunge a conclusioni sbagliate..."""
+    """The careless detective investigates, but comes to wrong conclusions..."""
     icon = s.detective_icon
     team = 'Good'
     name = s.detective_name
@@ -14,7 +14,7 @@ class Disastro(Role):
         self.power_was_used = False
 
     def __repr__(self) -> str:
-        return "<Role: Investigatore>"
+        return "<Role: Investigator>"
 
     def power(self, arg):
         # Indaga sul vero ruolo di una persona, se sono ancora disponibili usi del potere.
