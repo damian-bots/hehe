@@ -2,7 +2,7 @@ from .Role import Role
 import strings as s
 
 class Derek(Role):
-    """Derek muore. Quando gli pare."""
+    """Derek dies. Whenever he wants."""
     icon = s.derek_icon
     team = "Good"
     name = s.derek_name
