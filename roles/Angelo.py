@@ -2,8 +2,8 @@ from .Role import Role
 import strings as s
 
 class Angelo(Role):
-    """L'angelo può proteggere una persona al giorno dalla Mifia.
-       Se ha successo nella protezione, il suo ruolo sarà rivelato a tutti."""
+    """The angel can protect one person per day from Mifia.The angel can protect one person per day from Mifia.
+If he succeeds in protecting, his role will be revealed to everyone.If he succeeds in protecting, his role will be revealed to everyone."""
     icon = s.angel_icon
     team = 'Good'
     name = s.angel_name
@@ -15,9 +15,9 @@ class Angelo(Role):
 
     def __repr__(self) -> str:
         if self.protecting is None:
-            return "<Role: Angelo>"
+            return "<Role: Angel>"
         else:
-            return "<Role: Angelo, protecting {target}>".format(target=self.protecting.tusername)
+            return "<Role: Angel, protecting {target}>".format(target=self.protecting.tusername)
 
     def power(self, arg):
         # Imposta qualcuno come protetto
