@@ -3,7 +3,6 @@ import strings as s
 
 class Corrotto(Role):
     """The Corrupt One is an investigator who works for the Mifia."""
-    icon = s.corrupt_icon
     team = 'Evil'
     name = s.corrupt_name
     powerdesc = s.corrupt_power_description
