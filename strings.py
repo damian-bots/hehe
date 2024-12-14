@@ -128,7 +128,7 @@ Mom_discovery = "You discovered that @{target} is an *{icon} {role} *. \ n" \
 Intern_icon = "\ u0001f913"
 
 # Stagista: role name
-Intern_Name = "Stagista"
+Intern_Name = "Intern"
 
 # Stagista: Description of power
 Intern_power_descStition = "At any time of the game you can choose another player. \ n" \
