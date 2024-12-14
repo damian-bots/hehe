@@ -3,8 +3,8 @@ from .SignoreDelCaos import SignoreDelCaos
 import strings as s
 
 class Servitore(Role):
-    """Il servitore del Caos è il sottoposto al Signore del Caos.
-    Se non ci sono Signori del Caos in partita diventa Signore del Caos."""
+    """The Chaos minion is the Chaos Lord's underling.The Chaos minion is the Chaos Lord's underling.
+If there are no Chaos Lords in the game, he becomes the Chaos Lord.If there are no Chaos Lords in the game, he becomes the Chaos Lord."""
     icon = s.chaos_servant_icon
     team = 'Chaos'
     name = s.chaos_servant_name
