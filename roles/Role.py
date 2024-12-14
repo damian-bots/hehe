@@ -3,7 +3,7 @@ class Role:
     """Base class of a role. All other roles develop from here."""
     icon = "-"  # Icona del ruolo, da visualizzare di fianco al nome
     team = 'None'  # Squadra: 'None', 'Good', 'Evil', 'Chaos'; conta per le condizioni di vittoria
-    name = "UNDEFINED"  # Nome del ruolo, viene visualizzato dall'investigatore e durante l'assegnazione
+    name = Royal_Name  # Nome del ruolo, viene visualizzato dall'investigatore e durante l'assegnazione
     powerdesc = None  # Ha un potere? Se sì, queste sono le info su come usarlo in seconda persona.
 
     def __init__(self, player):
