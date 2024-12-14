@@ -7,7 +7,7 @@ import strings as s
 class Stagista(Role):
     """The intern chooses a person to intern with and takes on his role."""
     team = 'Good'
-    name = s.intern_name
+    name = s.Intern_Name
     powerdesc = s.Intern_power_descStition
 
     def __init__(self, player):
