@@ -17,15 +17,15 @@ from roles.roles import *
 logging.basicConfig(level=logging.WARNING,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
-token = filemanager.readfile('telegramapi.txt')
+token = filemanager.readfile('7717376439:AAHUUpfF-wY_L__bEX2QEnecIX0z0K77c04')
 updater = Updater(token)
 
 freenames = s.names_list.copy()
 
 
 class Player:
-    """Classe di un giocatore. Contiene tutti i dati riguardanti un giocatore all'interno di una partita, come il ruolo,
-       e i dati riguardanti telegram, come ID e username."""
+    """Class of a player. Contains all the data about a player within a game, such as role,Class of a player. Contains all the data about a player within a game, such as role,
+and data about telegram, such as ID and username.and data about telegram, such as ID and username."""
     def __init__(self, game: 'Game', tid: int, tusername: str, dummy: bool=False):
         self.tid = tid  # type: int
         self.tusername = tusername  # type: str
@@ -45,7 +45,7 @@ class Player:
         return "@{}".format(self.tusername)
 
     def message(self, text: str, *args, **kwargs):
-        """Manda un messaggio privato al giocatore."""
+        """Send a private message to the player."""
         if not self.dummy:
             while True:
                 try:
@@ -57,7 +57,7 @@ class Player:
                     break
 
     def kill(self):
-        """Uccidi il giocatore."""
+        """Kill the player."""
         self.role.ondeath()
         self.alive = False
         # Silenzia il giocatore
@@ -69,8 +69,7 @@ class Player:
 
 
 class Game:
-    """Classe di una partita, contenente parametri riguardanti stato della partita
-       e informazioni sul gruppo di Telegram."""
+    """A class of a game, containing parameters regarding the game state and information about the Telegram group."""
     def __init__(self, bot: Bot, groupid: int):
         self.groupid = groupid  # type: int
         self.bot = bot  # type: Bot
@@ -118,7 +117,7 @@ class Game:
         return r
 
     def message(self, text: str, *args, **kwargs):
-        """Manda un messaggio nel gruppo."""
+        """Send a message in the group."""
         while True:
             try:
                 self.bot.sendMessage(self.groupid, text, *args, parse_mode=ParseMode.MARKDOWN, **kwargs)
@@ -129,32 +128,32 @@ class Game:
                 break
 
     def adminmessage(self, text: str):
-        """Manda un messaggio privato al creatore della partita."""
+        """Send a private message to the creator of the match."""
         self.admin.message(text)
 
     def mifiamessage(self, text: str):
-        """Manda un messaggio privato a tutti i Mifiosi nella partita."""
+        """Send a private message to all the Mafia in the match."""
         # Trova tutti i mifiosi nell'elenco dei giocatori
         for player in self.players:
             if isinstance(player.role, Mifioso) or isinstance(player.role, Corrotto):
                 player.message(text)
 
     def findplayerbyid(self, tid: int) -> Union['Player', None]:
-        """Trova il giocatore con un certo id."""
+        """Find the player with a certain id."""
         for player in self.players:
             if player.tid == tid:
                 return player
         return None
 
     def findplayerbyusername(self, tusername: str) -> Union['Player', None]:
-        """Trova il giocatore con un certo username."""
+        """Find the player with a certain username."""
         for player in self.players:
             if player.tusername.lower() == tusername.strip("@").lower():
                 return player
         return None
 
     def updategroupname(self):
-        """Aggiorna il titolo della chat."""
+        """Update the chat title."""
         try:
             if self.phase == "Voting":
                 self.bot.set_chat_title(self.groupid, s.group_name.format(phase=s.day.format(day=self.day), name=self.name))
@@ -164,7 +163,7 @@ class Game:
             print("Bot is not administrator in group {}".format(self.groupid))
 
     def assignroles(self):
-        """Assegna i ruoli specificati in playersinrole a tutti i giocatori."""
+        """Assigns the roles specified in players in role to all players."""
         random.seed()
         playersleft = self.players.copy()
         # Assegna i ruoli secondo i numeri all'interno di playersinrole
@@ -190,7 +189,7 @@ class Game:
         self.mifiamessage(text)
 
     def updatevotes(self):
-        """Aggiorna il conteggio dei voti di tutti i giocatori."""
+        """Updates the vote count of all players."""
         for player in self.players:
             player.votes = 0
         for player in self.players:
@@ -198,7 +197,7 @@ class Game:
                 player.votingfor.votes += 1
 
     def updatemifiavotes(self):
-        """Aggiorna il conteggio dei voti mifiosi di tutti i giocatori."""
+        """Updates the mifi vote count of all players."""
         for player in self.players:
             player.mifiavotes = 0
         for player in self.playersinrole['Mifioso']:
@@ -207,7 +206,7 @@ class Game:
                     player.role.target.mifiavotes += 1
 
     def mostvotedplayers(self) -> List[Player]:
-        """Trova i giocatori più votati."""
+        """Find the top rated players."""
         mostvoted = list()
         currenttop = 0
         self.updatevotes()
@@ -224,7 +223,7 @@ class Game:
             return list()
 
     def mostvotedmifia(self) -> List[Player]:
-        """Trova i giocatori più votati dalla mifia."""
+        """Find the most voted players by mifia."""
         mostvoted = list()
         currenttop = 0
         self.updatemifiavotes()
@@ -241,7 +240,7 @@ class Game:
             return list()
 
     def endday(self):
-        """Finisci la giornata, uccidi il più votato del giorno ed esegui gli endday di tutti i giocatori."""
+        """End the day, kill the top vote of the day, and perform end days of all players."""
         # SALVA LA PARTITA, così se crasha si riprende da qui
         self.save()
         # Conta i voti ed elimina il più votato.
@@ -310,7 +309,7 @@ class Game:
         self.bot.pinChatMessage(self.groupid, self.votemsg.message_id)
 
     def startpreset(self):
-        """Inizio della fase di preset"""
+        """Start of the preset phase"""
         self.newphase("Preset")
         # Crea la tastiera
         kbmarkup = InlineKeyboardMarkup([
@@ -326,7 +325,7 @@ class Game:
         self.bot.sendMessage(self.groupid, s.preset_choose, parse_mode=ParseMode.MARKDOWN, reply_markup=kbmarkup)
 
     def loadpreset(self, preset: str):
-        """Fine della fase di preset: carica il preset selezionato o passa a config"""
+        """End of preset phase: load selected preset or switch to config"""
         if preset == "simple":
             # Preset semplice (solo Royal, Mifiosi e Investigatori)
             self.roleconfig = {
@@ -458,7 +457,7 @@ class Game:
         file.close()
 
     def victoryconditions(self):
-        """Controlla se qualcuno ha completato le condizioni di vittoria."""
+        """Check if anyone has completed the victory conditions."""
         good = 0
         evil = 0
         alive = 0
@@ -499,7 +498,7 @@ class Game:
             self.endgame()
 
     def changerole(self, player: Player, newrole):
-        """Cambia il ruolo di un giocatore, aggiornando tutti i valori"""
+        """Changes a player's role, updating all values"""
         # Aggiorna le liste dei ruoli
         if player.role.__class__ != Royal:
             self.playersinrole[player.role.__class__.__name__].remove(player)
@@ -593,7 +592,7 @@ def newgame(bot: Bot, update):
 
 
 def join(bot: Bot, update):
-    """Unisciti a una partita."""
+    """Join a game."""
     game = findgamebyid(update.message.chat.id)
     # Nessuna partita in corso
     if game is None:
@@ -626,7 +625,7 @@ def join(bot: Bot, update):
 
 
 def debugjoin(bot: Bot, update):
-    """Aggiungi dei bot alla partita."""
+    """Add bots to the game."""
     if __debug__:
         game = findgamebyid(update.message.chat.id)
         if game is None:
@@ -670,7 +669,7 @@ def status(bot: Bot, update):
 
 
 def endjoin(bot: Bot, update):
-    """Termina la fase di join e inizia quella di votazione."""
+    """The join phase ends and the voting phase begins."""
     game = findgamebyid(update.message.chat.id)
     if game is not None and game.phase == 'Join':
         if update.message.from_user.id == game.admin.tid:
@@ -683,14 +682,14 @@ def endjoin(bot: Bot, update):
 
 
 def endday(_: Bot, update):
-    """Termina la giornata attuale."""
+    """The current day ends."""
     game = findgamebyid(update.message.chat.id)
     if game is not None and game.phase is 'Voting' and update.message.from_user.id == game.admin.tid:
         game.endday()
 
 
 def power(bot: Bot, update):
-    """Attiva il potere del tuo ruolo."""
+    """Activate the power of your role."""
     if update.message.chat.type == 'private':
         cmd = update.message.text.split(' ', 2)
         game = findgamebyname(cmd[1])
@@ -719,7 +718,7 @@ def power(bot: Bot, update):
 
 
 def role(bot: Bot, update):
-    """Visualizza il tuo ruolo."""
+    """View your role."""
     game = findgamebyid(update.message.chat.id)
     if game is not None and game.phase is 'Voting':
         player = game.findplayerbyid(update.message.from_user.id)
@@ -736,7 +735,7 @@ def role(bot: Bot, update):
 
 
 def kill(bot: Bot, update):
-    """Uccidi un giocatore in partita."""
+    """Kill a player in game."""
     if __debug__:
         game = findgamebyid(update.message.chat.id)
         if game is not None and game.phase is 'Voting':
@@ -756,7 +755,7 @@ def kill(bot: Bot, update):
 
 
 def delete(bot: Bot, update):
-    """Elimina una partita in corso."""
+    """Delete a game in progress."""
     if update.message.chat.type == 'private':
         if update.message.from_user.username != "Steffo":
             bot.sendMessage(update.message.chat.id, s.error_not_owner, parse_mode=ParseMode.MARKDOWN)
@@ -785,7 +784,7 @@ def delete(bot: Bot, update):
         game.endgame()
 
 def load(bot: Bot, update):
-    """Carica una partita salvata."""
+    """Load a saved game."""
     game = findgamebyid(update.message.chat.id)
     if game is not None:
         bot.sendMessage(update.message.chat.id, s.error_game_in_progress, parse_mode=ParseMode.MARKDOWN)
@@ -797,7 +796,7 @@ def load(bot: Bot, update):
 
 
 def save(bot: Bot, update):
-    """Salva una partita su file."""
+    """Save a game to file."""
     game = findgamebyid(update.message.chat.id)
     if game is not None:
         game.save()
@@ -806,7 +805,7 @@ def save(bot: Bot, update):
 
 
 def debug(bot: Bot, update):
-    """Visualizza tutti i ruoli e gli id."""
+    """View all roles and ids."""
     if __debug__:
         game = findgamebyid(update.message.chat.id)
         if game is not None:
@@ -816,7 +815,7 @@ def debug(bot: Bot, update):
 
 
 def debugchangerole(bot: Bot, update):
-    """Cambia il ruolo a un giocatore."""
+    """Change the role of a player."""
     if __debug__:
         game = findgamebyid(update.message.chat.id)
         if game is not None:
@@ -827,13 +826,13 @@ def debugchangerole(bot: Bot, update):
 
 
 def debuggameslist(bot: Bot, update):
-    """Visualizza l'elenco delle partite in corso."""
+    """View the list of ongoing games."""
     if __debug__:
         bot.sendMessage(update.message.from_user.id, repr(inprogress), parse_mode=ParseMode.MARKDOWN)
 
 
 def inlinekeyboard(bot: Bot, update):
-    """Seleziona un preset dalla tastiera."""
+    """Select a preset from the keyboard."""
     game = findgamebyid(update.callback_query.message.chat.id)
     if game is None:
         bot.answerCallbackQuery(callback_query_id=update.callback_query.id, text=s.error_no_games_found, show_alert=True)
