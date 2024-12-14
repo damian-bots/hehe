@@ -2,8 +2,8 @@ from .Role import Role
 import strings as s
 
 class Vigilante(Role):
-    """Il vigilante può uccidere una persona a sua scelta.
-    Possibilmente un mifioso."""
+    """The vigilante can kill a person of his choice.The vigilante can kill a person of his choice.
+Possibly a mifioso."""
     icon = s.vigilante_icon
     team = 'Good'
     name = s.vigilante_name
@@ -16,9 +16,9 @@ class Vigilante(Role):
 
     def __repr__(self) -> str:
         if self.target is None:
-            return "<Role: Angelo>"
+            return "<Role: Angel>"
         else:
-            return "<Role: Angelo, protecting {target}>".format(target=self.target.tusername)
+            return "<Role: Angel, protecting {target}>".format(target=self.target.tusername)
 
     def power(self, arg):
         # Imposta qualcuno come bersaglio
