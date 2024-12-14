@@ -6,7 +6,6 @@ import strings as s
 
 class Stagista(Role):
     """The intern chooses a person to intern with and takes on his role."""
-    icon = s.intern_icon
     team = 'Good'
     name = s.intern_name
     powerdesc = s.intern_power_description
