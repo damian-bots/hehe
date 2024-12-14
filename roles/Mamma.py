@@ -6,7 +6,7 @@ class Mamma(Role):
     """Mom hears rumors around town and discovers a new role every now and then..."""
     team = 'Good'
     name = s.mom_name
-    powerdesc = s.mom_power_description
+    powerdesc = s.Mom_power_description
 
     def __repr__(self) -> str:
         return "<Role: Mamma>"
