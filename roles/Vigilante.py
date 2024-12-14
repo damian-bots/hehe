@@ -4,7 +4,6 @@ import strings as s
 class Vigilante(Role):
     """The vigilante can kill a person of his choice.The vigilante can kill a person of his choice.
 Possibly a mifioso."""
-    icon = s.vigilante_icon
     team = 'Good'
     name = s.vigilante_name
     powerdesc = s.vigilante_power_description
