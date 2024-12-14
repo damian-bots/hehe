@@ -167,7 +167,7 @@ Chaos_lord_name = "Lord of chaos"
 
 # Lord of chaos: description of power
 chaos_lord_power_descition = "you are the *lord of chaos *! \ n" \
- "Mortal affairs are not interested in, so you are not part of the MIFia team or of the Royal team. \ N" \ \
+ "Mortal affairs are not interested in, so you are not part of the MIFia team or of the Royal team. \ N" \ 
  "Consequently, you automatically have the match _! \ N" \
  "You can use your chaos powers to change role to another player. \ N" \
  "The role it receives will be random. \ N" \
