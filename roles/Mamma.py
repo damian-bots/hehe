@@ -4,7 +4,6 @@ import random
 
 class Mamma(Role):
     """Mom hears rumors around town and discovers a new role every now and then..."""
-    icon = s.mom_icon
     team = 'Good'
     name = s.mom_name
     powerdesc = s.mom_power_description
