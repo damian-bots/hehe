@@ -4,7 +4,6 @@ import strings as s
 class Terrorista(Role):
     """The terrorist is a mifioso who can kill in only one way: by getting killed by the Royals.The terrorist is a mifioso who can kill in only one way: by getting killed by the Royals.
 If he succeeds, he wins the game and kills everyone who voted for him."""
-    icon = s.terrorist_icon
     team = "Evil"
     name = s.terrorist_name
     powerdesc = s.terrorist_power_description
