@@ -7,7 +7,7 @@ import time
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler
 from telegram import ParseMode
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Bot
-from telegram.error import TelegramError, TimedOut, RetryAfter
+from telegram.error import Unauthorized, TimedOut, RetryAfter
 import filemanager
 import random
 import strings as s
@@ -20,6 +20,9 @@ logging.basicConfig(level=logging.WARNING,
 
 token = filemanager.readfile('token.txt')
 updater = Updater(token)
+updater.start_polling()
+updater.idle()
+
 
 freenames = s.names_list.copy()
 
