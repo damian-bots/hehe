@@ -6,7 +6,7 @@ class Angelo(Role):
 If he succeeds in protecting, his role will be revealed to everyone.If he succeeds in protecting, his role will be revealed to everyone."""
     team = 'Good'
     name = s.angel_name
-    powerdesc = s.angel_power_description
+    powerdesc = s.Angel_power_description
 
     def __init__(self, player):
         super().__init__(player)
