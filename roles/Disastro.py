@@ -5,7 +5,7 @@ import random
 class Disastro(Role):
     """The careless detective investigates, but comes to wrong conclusions..."""
     team = 'Good'
-    name = s.detective_name
+    name = s.Disaster_name
     powerdesc = s.detective_power_descition
 
     def __init__(self, player):
