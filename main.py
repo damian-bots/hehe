@@ -17,7 +17,7 @@ from roles.roles import *
 logging.basicConfig(level=logging.WARNING,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
-token = filemanager.readfile('7717376439:AAHUUpfF-wY_L__bEX2QEnecIX0z0K77c04')
+token = filemanager.readfile('token.txt')
 updater = Updater(token)
 
 freenames = s.names_list.copy()
