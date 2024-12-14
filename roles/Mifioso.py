@@ -3,7 +3,6 @@ import strings as s
 
 class Mifioso(Role):
     """The global enemy. It can target one person per day, then kill them at the end.."""
-    icon = s.mifia_icon
     team = 'Evil'
     name = s.mifia_name
     powerdesc = s.mifia_power_description
