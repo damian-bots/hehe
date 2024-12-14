@@ -4,7 +4,6 @@ import random
 
 class Investigatore(Role):
     """The investigator can investigate a person's true role once per day."""
-    icon = s.detective_icon
     team = 'Good'
     name = s.detective_name
     powerdesc = s.detective_power_description
