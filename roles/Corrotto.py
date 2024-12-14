@@ -5,7 +5,7 @@ class Corrotto(Role):
     """The Corrupt One is an investigator who works for the Mifia."""
     team = 'Evil'
     name = s.corrupt_name
-    powerdesc = s.corrupt_power_description
+    powerdesc = s.Corrupt_power_description
     refillpoweruses = 1
 
     def __init__(self, player):
