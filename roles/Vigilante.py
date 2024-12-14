@@ -5,7 +5,7 @@ class Vigilante(Role):
     """The vigilante can kill a person of his choice.The vigilante can kill a person of his choice.
 Possibly a mifioso."""
     team = 'Good'
-    name = s.vigilante_name
+    name = s.Vigilante_name
     powerdesc = s.Vigilante_power_description
 
     def __init__(self, player):
