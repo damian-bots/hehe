@@ -6,7 +6,7 @@ class Terrorista(Role):
 If he succeeds, he wins the game and kills everyone who voted for him."""
     team = "Evil"
     name = s.terrorist_name
-    powerdesc = s.terrorist_power_description
+    powerdesc = s.terrorist_power_descition
 
     def __repr__(self) -> str:
         return "<Role: Terrorista>"
