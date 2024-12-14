@@ -166,7 +166,7 @@ chaos_lord_icon = "\ u0001f479"
 Chaos_lord_name = "Lord of chaos"
 
 # Lord of chaos: description of power
-chaos_lord_power_descition = """you are the *lord of chaos *! \n" \
+chaos_lord_power_descition = "you are the *lord of chaos *! \n" \
  "Mortal affairs are not interested in, so you are not part of the MIFia team or of the Royal team. \n" \
  "Consequently, you automatically have the match _! \n" \
  "You can use your chaos powers to change role to another player. \n" \
