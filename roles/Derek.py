@@ -3,9 +3,10 @@ import strings as s
 
 class Derek(Role):
     """Derek dies. Whenever he wants."""
+   icon = s.Derek_icon
     team = "Good"
     name = s.derek_name
-    powerdesc = s.derek_power_description
+    powerdesc = s.Derek_power_description
 
     def __init__(self, player):
         super().__init__(player)
