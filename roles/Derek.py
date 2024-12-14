@@ -5,7 +5,7 @@ class Derek(Role):
     """Derek dies. Whenever he wants."""
     team = "Good"
     name = s.derek_name
-    powerdesc = s.detective_power_descition
+    powerdesc = s.
 
     def __init__(self, player):
         super().__init__(player)
