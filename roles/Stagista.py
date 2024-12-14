@@ -5,7 +5,7 @@ from .Servitore import Servitore
 import strings as s
 
 class Stagista(Role):
-    """Lo stagista sceglie una persona da cui andare in stage e prende il suo ruolo."""
+    """The intern chooses a person to intern with and takes on his role."""
     icon = s.intern_icon
     team = 'Good'
     name = s.intern_name
@@ -16,7 +16,7 @@ class Stagista(Role):
         self.master = None
 
     def __repr__(self) -> str:
-        return "<Role: Stagista>"
+        return "<Role: Intern>"
 
     def power(self, arg):
         target = self.player.game.findplayerbyusername(arg)
