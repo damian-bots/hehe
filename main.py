@@ -688,7 +688,7 @@ def endjoin(bot: Bot, update):
 def endday(_: Bot, update):
     """The current day ends."""
     game = findgamebyid(update.message.chat.id)
-    if game is not None and game.phase is 'Voting' and update.message.from_user.id == game.admin.tid:
+    if game is not None and game.phase == 'Voting' and update.message.from_user.id == game.admin.tid:
         game.endday()
 
 
@@ -724,7 +724,7 @@ def power(bot: Bot, update):
 def role(bot: Bot, update):
     """View your role."""
     game = findgamebyid(update.message.chat.id)
-    if game is not None and game.phase is 'Voting':
+    if game is not None and game.phase == 'Voting':
         player = game.findplayerbyid(update.message.from_user.id)
         if player is not None:
             if player.alive:
@@ -742,7 +742,7 @@ def kill(bot: Bot, update):
     """Kill a player in game."""
     if __debug__:
         game = findgamebyid(update.message.chat.id)
-        if game is not None and game.phase is 'Voting':
+        if game is not None and game.phase == 'Voting':
             if update.message.from_user.id == game.admin.tid:
                 target = game.findplayerbyusername(update.message.text.split(' ')[1])
                 if target is not None:
@@ -841,13 +841,13 @@ def inlinekeyboard(bot: Bot, update):
     if game is None:
         bot.answerCallbackQuery(callback_query_id=update.callback_query.id, text=s.error_no_games_found, show_alert=True)
         return
-    if game.phase is 'Preset':
+    if game.phase == 'Preset':
         if update.callback_query.from_user.id != game.admin.tid:
             bot.answerCallbackQuery(callback_query_id=update.callback_query.id, text=s.error_not_admin, show_alert=True)
             return
         game.loadpreset(update.callback_query.data)
         bot.answerCallbackQuery(callback_query_id=update.callback_query.id, text=s.preset_selected.format(selected=update.callback_query.data))
-    elif game.phase is 'Voting':
+    elif game.phase == 'Voting':
         # Controlla che non sia il primo giorno
         if game.day <= 1:
             bot.answerCallbackQuery(callback_query_id=update.callback_query.id, text=s.error_no_votes_on_first_day, show_alert=True)
