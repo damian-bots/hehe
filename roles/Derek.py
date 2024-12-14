@@ -3,7 +3,6 @@ import strings as s
 
 class Derek(Role):
     """Derek dies. Whenever he wants."""
-    icon = s.derek_icon
     team = "Good"
     name = s.derek_name
     powerdesc = s.derek_power_description
