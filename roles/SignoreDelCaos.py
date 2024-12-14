@@ -5,7 +5,7 @@ class SignoreDelCaos(Role):
     """The Lord of Chaos is a Derek in the last seconds before death.The Lord of Chaos is a Derek in the last seconds before death.
 He can change other people's lives... Even if he can't decide what."""
     team = 'Chaos'
-    name = s.chaos_lord_name
+    name = s.Chaos_lord_name
     powerdesc = s.chaos_lord_power_descition
 
     def __init__(self, player):
