@@ -5,7 +5,7 @@ class Mifioso(Role):
     """The global enemy. It can target one person per day, then kill them at the end.."""
     team = 'Evil'
     name = s.mifia_name
-    powerdesc = s.mifia_power_description
+    powerdesc = s.MIFIA_POWER_DescStition
 
     def __init__(self, player):
         super().__init__(player)
