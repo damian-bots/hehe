@@ -4,6 +4,7 @@ import strings as s
 class Angelo(Role):
     """The angel can protect one person per day from Mifia.The angel can protect one person per day from Mifia.
 If he succeeds in protecting, his role will be revealed to everyone.If he succeeds in protecting, his role will be revealed to everyone."""
+   icon = s.Angel_icon
     team = 'Good'
     name = s.angel_name
     powerdesc = s.Angel_power_description
