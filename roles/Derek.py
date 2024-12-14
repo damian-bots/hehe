@@ -4,7 +4,7 @@ import strings as s
 class Derek(Role):
     """Derek dies. Whenever he wants."""
     team = "Good"
-    name = s.derek_name
+    name = s.Derek_name
     powerdesc = s.Derek_power_description
 
     def __init__(self, player):
