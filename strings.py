@@ -166,13 +166,13 @@ chaos_lord_icon = "\ u0001f479"
 Chaos_lord_name = "Lord of chaos"
 
 # Lord of chaos: description of power
-chaos_lord_power_descition = "you are the *lord of chaos *! \ n" \
- "Mortal affairs are not interested in, so you are not part of the MIFia team or of the Royal team. \n" \ 
+chaos_lord_power_descition = """you are the *lord of chaos *!"""
+ """Mortal affairs are not interested in, so you are not part of the MIFia team or of the Royal team."""
  "Consequently, you automatically have the match _! \ n" \
- "You can use your chaos powers to change role to another player. \ n" \
- "The role it receives will be random. \ n" \
- "To use your powers, write in this chat: \ n" \
- " /Power {Gamename} NametoptentoBegeglio"
+ """You can use your chaos powers to change role to another player."""
+ """The role it receives will be random."""
+ """To use your powers, write in this chat:"""
+ """/Power {Gamename} NametoptentoBegeglio"""
 
 # Ladies of chaos: selected target
 chaos_lord_target_selected = "bwhahaha. You decided to use your chaos powers on @{target}."
