@@ -432,7 +432,6 @@ fatal_bot_rate_limited = "\U0001F6D1 Critical error: The bot sent too many reque
 
 # List of possible names for a game
 debug = True 
-if debug:
 names_list = ["Dev"]
 else:
 names_list = ["Thirteen"]
