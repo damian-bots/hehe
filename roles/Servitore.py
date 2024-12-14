@@ -7,7 +7,7 @@ class Servitore(Role):
 If there are no Chaos Lords in the game, he becomes the Chaos Lord.If there are no Chaos Lords in the game, he becomes the Chaos Lord."""
     team = 'Chaos'
     name = s.chaos_servant_name
-    powerdesc = s.chaos_servant_power_description
+    powerdesc = s.Chaos_Servant_power_description
 
     def __repr__(self) -> str:
         return "<Role: Servant of Chaos>"
