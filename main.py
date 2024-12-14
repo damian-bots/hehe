@@ -18,7 +18,7 @@ from roles.roles import *
 logging.basicConfig(level=logging.WARNING,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
-token = 7717376439:AAFZHaATqEq73L323TGwMGIYZPQaduo9_CM""
+token = "7717376439:AAFZHaATqEq73L323TGwMGIYZPQaduo9_CM"
 updater = Updater(token)
 updater.start_polling()
 updater.idle()
