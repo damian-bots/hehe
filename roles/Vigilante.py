@@ -6,7 +6,7 @@ class Vigilante(Role):
 Possibly a mifioso."""
     team = 'Good'
     name = s.vigilante_name
-    powerdesc = s.vigilante_power_description
+    powerdesc = s.Vigilante_power_description
 
     def __init__(self, player):
         super().__init__(player)
