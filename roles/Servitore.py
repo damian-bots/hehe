@@ -5,7 +5,6 @@ import strings as s
 class Servitore(Role):
     """The Chaos minion is the Chaos Lord's underling.The Chaos minion is the Chaos Lord's underling.
 If there are no Chaos Lords in the game, he becomes the Chaos Lord.If there are no Chaos Lords in the game, he becomes the Chaos Lord."""
-    icon = s.chaos_servant_icon
     team = 'Chaos'
     name = s.chaos_servant_name
     powerdesc = s.chaos_servant_power_description
