@@ -6,7 +6,7 @@ class Disastro(Role):
     """The careless detective investigates, but comes to wrong conclusions..."""
     team = 'Good'
     name = s.detective_name
-    powerdesc = s.detective_power_description
+    powerdesc = s.detective_power_descition
 
     def __init__(self, player):
         super().__init__(player)
