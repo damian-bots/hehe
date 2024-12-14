@@ -8,7 +8,7 @@ class Stagista(Role):
     """The intern chooses a person to intern with and takes on his role."""
     team = 'Good'
     name = s.intern_name
-    powerdesc = s.intern_power_description
+    powerdesc = s.Intern_power_descStition
 
     def __init__(self, player):
         super().__init__(player)
