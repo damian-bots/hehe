@@ -11,7 +11,7 @@ If there are no Chaos Lords in the game, he becomes the Chaos Lord.If there are 
     powerdesc = s.chaos_servant_power_description
 
     def __repr__(self) -> str:
-        return "<Role: Servitore del Caos>"
+        return "<Role: Servant of Chaos>"
 
     def onendday(self):
         for chaoslord in self.player.game.playersinrole["SignoreDelCaos"]:
