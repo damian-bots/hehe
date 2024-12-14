@@ -4,7 +4,7 @@ import strings as s
 class Mifioso(Role):
     """The global enemy. It can target one person per day, then kill them at the end.."""
     team = 'Evil'
-    name = s.mifia_name
+    name = s.MIFIA_NAME
     powerdesc = s.MIFIA_POWER_DescStition
 
     def __init__(self, player):
