@@ -4,7 +4,6 @@ import random
 
 class Disastro(Role):
     """The careless detective investigates, but comes to wrong conclusions..."""
-    icon = s.detective_icon
     team = 'Good'
     name = s.detective_name
     powerdesc = s.detective_power_description
