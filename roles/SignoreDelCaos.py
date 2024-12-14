@@ -14,7 +14,7 @@ He can change other people's lives... Even if he can't decide what."""
         self.target = None
 
     def __repr__(self) -> str:
-        return "<Role: Signore del Caos>"
+        return "<Role: Lord of Chaos>"
 
     def power(self, arg):
         selected = self.player.game.findplayerbyusername(arg)
