@@ -6,7 +6,7 @@ class Investigatore(Role):
     """The investigator can investigate a person's true role once per day."""
     team = 'Good'
     name = s.detective_name
-    powerdesc = s.detective_power_description
+    powerdesc = s.detective_power_descition
 
     def __init__(self, player):
         super().__init__(player)
