@@ -431,10 +431,8 @@ fatal_bot_rate_limited = "\U0001F6D1 Critical error: The bot sent too many reque
 "It is recommended to wait 5 minutes, cancel it and reload the last available save."
 
 # List of possible names for a game
-if debug:
-names_list = ["Dev"]
-else:
-names_list = ["Thirteen"]
+if some_condition:
+    names_list = ["Dev"]  # Indented correctly
 
 # Select preset
 preset_choose = "*Select a preset for the game:*"
