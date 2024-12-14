@@ -2,8 +2,8 @@ from .Role import Role
 import strings as s
 
 class SignoreDelCaos(Role):
-    """Il Signore del Caos è un Derek negli ultimi secondi prima della morte.
-    Può cambiare la vita delle altre persone... Anche se non può decidere in cosa."""
+    """The Lord of Chaos is a Derek in the last seconds before death.The Lord of Chaos is a Derek in the last seconds before death.
+He can change other people's lives... Even if he can't decide what."""
     icon = s.chaos_lord_icon
     team = 'Chaos'
     name = s.chaos_lord_name
