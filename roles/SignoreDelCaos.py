@@ -6,7 +6,7 @@ class SignoreDelCaos(Role):
 He can change other people's lives... Even if he can't decide what."""
     team = 'Chaos'
     name = s.chaos_lord_name
-    powerdesc = s.chaos_lord_power_description
+    powerdesc = s.chaos_lord_power_descition
 
     def __init__(self, player):
         super().__init__(player)
