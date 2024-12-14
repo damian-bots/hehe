@@ -5,7 +5,7 @@ import pickle  # Per salvare la partita su file.
 import math
 import time
 from telegram.ext import Updater, CommandHandler, CallbackQueryHandler
-from telegram.constants import ParseMode
+from telegram import ParseMode
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Bot
 from telegram.error import TelegramError, TimedOut, RetryAfter
 import filemanager
