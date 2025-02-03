@@ -18,11 +18,6 @@ from roles.roles import *
 logging.basicConfig(level=logging.WARNING,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
-token = filemanager.readfile('telegramapi.txt')
-updater = Updater("7741293072:AAEiWZSyFz1V39uQYbHEk10BTUoPYiUxyS4")
-updater.start_polling()
-updater.idle()
-
 
 freenames = s.names_list.copy()
 
@@ -899,7 +894,10 @@ def inlinekeyboard(bot: Bot, update):
 def breakpoint_here(*args, **kwargs):
     if args[2] == "Timed out":
         print("Si è buggato tutto. As usual.")
-
+      
+updater = Updater("7741293072:AAEiWZSyFz1V39uQYbHEk10BTUoPYiUxyS4")
+updater.start_polling()
+updater.idle()
 
 updater.dispatcher.add_handler(CommandHandler('ping', ping))
 updater.dispatcher.add_handler(CommandHandler('newgame', newgame))
