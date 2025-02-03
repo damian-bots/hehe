@@ -19,7 +19,7 @@ logging.basicConfig(level=logging.WARNING,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 token = filemanager.readfile('telegramapi.txt')
-updater = Updater("7628114935:AAEyZSLZhWP4hiQwM2j_xO-VUkokzh6caWU")
+updater = Updater("7741293072:AAEiWZSyFz1V39uQYbHEk10BTUoPYiUxyS4")
 updater.start_polling()
 updater.idle()
 
