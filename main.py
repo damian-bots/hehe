@@ -922,8 +922,3 @@ updater.dispatcher.add_error_handler(breakpoint_here)
 
 if __name__ == "__main__":
     updater.start_polling()
-    while True:
-        try:
-            updater.idle()
-        except TimedOut:
-            time.sleep(10)
