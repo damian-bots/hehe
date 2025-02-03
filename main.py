@@ -921,4 +921,4 @@ updater.dispatcher.add_handler(CallbackQueryHandler(inlinekeyboard))
 updater.dispatcher.add_error_handler(breakpoint_here)
 
 if __name__ == "__main__":
-    updater.start_polling()
+    updater.run_polling()
