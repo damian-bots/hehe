@@ -18,7 +18,7 @@ from roles.roles import *
 logging.basicConfig(level=logging.WARNING,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
-token = "7741293072:AAEiWZSyFz1V39uQYbHEk10BTUoPYiUxyS4"
+token = filemanager.readfile('telegramapi.txt')
 updater = Updater(token)
 updater.start_polling()
 updater.idle()
